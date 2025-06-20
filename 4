@@ -1,0 +1,14 @@
+days = int(input("Enter the no of days:"))
+if days > 0 and days <= 5:
+    amt = 0.50 * days
+    print("Fine amount to pay RS:", amt)
+elif days >= 6 and days <= 10:
+    amt = 1 * days
+    print("Fine amount to pay RS:", amt)
+elif days > 10:
+    amt = 5 * days
+    print("Fine amount to pay RS:", amt)
+    if days > 30:
+        print("Your membership would be cancelled")
+else:
+    print("Invalid")
