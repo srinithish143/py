@@ -1,0 +1,5 @@
+class abc:
+    def f(x, y):
+        return pow(x, y)
+
+print("The power of the value is", abc.f(2, 3))
