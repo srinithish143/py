@@ -1,0 +1,9 @@
+dict1 = {1: "Python", 2: "Java", 3: "Ruby", 4: "Scala"}
+print(dict1)
+dict1[5] = "VB"
+print("Updated Dictionary", dict1)
+print(dict1[2])
+dict1[3] = "Oracle"
+print(dict1)
+print(dict1.get(3))
+print("Length:%d" % len(dict1))
