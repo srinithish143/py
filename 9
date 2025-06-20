@@ -1,0 +1,25 @@
+import sqlite3
+
+conn = sqlite3.connect("test.db")
+cursor = conn.cursor()
+
+conn.execute("create table comp(id number(5), name char(30), age number(3), address char(50), salary number(7,2));")
+cursor.execute("""insert into comp(id, name, age, address, salary) values(1, 'meera', 22, 'new st', 5000)""")
+cursor.execute("""insert into comp(id, name, age, address, salary) values(2, 'usha', 23, 'west st', 6000)""")
+cursor.execute("""insert into comp(id, name, age, address, salary) values(3, 'divya', 25, 'west st', 40000)""")
+cursor.execute("""insert into comp(id, name, age, address, salary) values(4, 'divya.k', 25, 'west st', 40000)""")
+conn.commit()
+
+cursor.execute("SELECT * FROM comp")
+myresult = cursor.fetchall()
+for x in myresult:
+    print(x)
+
+cursor.execute("DELETE FROM comp WHERE name = 'meera'")
+conn.commit()
+cursor.execute("SELECT * FROM comp")
+myresult = cursor.fetchall()
+for x in myresult:
+    print(x)
+
+conn.close()
