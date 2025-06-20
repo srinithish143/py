@@ -1,0 +1,7 @@
+for i in range(2, 11):
+    print((1 / i), end=" ")
+
+a = []
+for i in range(2, 11):
+    a.append(1 / i)
+print("\n", a)
